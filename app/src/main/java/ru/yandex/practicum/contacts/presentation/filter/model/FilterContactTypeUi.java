@@ -3,8 +3,6 @@ package ru.yandex.practicum.contacts.presentation.filter.model;
 import androidx.annotation.NonNull;
 
 import ru.yandex.practicum.contacts.presentation.base.ListDiffInterface;
-import ru.yandex.practicum.contacts.presentation.main.ContactUi;
-
 public class FilterContactTypeUi implements ListDiffInterface<FilterContactTypeUi> {
 
     private final FilterContactType contactType;
@@ -24,8 +22,8 @@ public class FilterContactTypeUi implements ListDiffInterface<FilterContactTypeU
     }
 
     @Override
-    public boolean theSameAs(FilterContactTypeUi type) {
-        return this.getContactType() == type.getContactType();
+    public boolean theSameAs(FilterContactTypeUi other) {
+        return this.getContactType() == other.getContactType();
     }
 
     @Override
